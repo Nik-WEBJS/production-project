@@ -6,7 +6,7 @@
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "target": "ES6",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
