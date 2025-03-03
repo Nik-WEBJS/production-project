@@ -3,3 +3,4 @@
 /.vscode
 /extractedTranslations
 package-lock.json
+*storybook.log
