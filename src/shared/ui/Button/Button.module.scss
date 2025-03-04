@@ -4,11 +4,16 @@
   padding: 6px 15px;
 }
 
-.clear {
+.clear,
+.clearInverted {
   padding: 0;
   border: none;
   background: none;
   outline: none;
+}
+
+.clearInverted {
+  color: var(--inverted-primary-color);
 }
 
 .outline {
@@ -53,11 +58,11 @@
 }
 
 .size_m {
-  font: var(--font-m)
+  font: var(--font-m);
 }
 .size_l {
-  font: var(--font-l)
+  font: var(--font-l);
 }
 .size_xl {
-  font: var(--font-xl)
+  font: var(--font-xl);
 }
