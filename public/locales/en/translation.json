@@ -1,8 +1,10 @@
 {
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
-  "Главная страница": "Main Page",
+  "Главная страница": "Main",
+  "О сайте": "About us",
   "Страница не найдена": "Page not found",
   "Язык": "English",
-  "Произошла ошибка": "An error occurred"
+  "Произошла ошибка": "An error occurred",
+  "Короткий язык": "EN"
 }
