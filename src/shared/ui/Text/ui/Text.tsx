@@ -1,7 +1,6 @@
-import React from "react";
+import { memo } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Text.module.scss";
-import { useTranslation } from "react-i18next";
 
 export enum TextTheme {
   PRIMARY = "primary",
@@ -15,17 +14,15 @@ interface TextProps {
   theme?: TextTheme;
 }
 
-export const Text = ({
-  className,
-  text,
-  title,
-  theme = TextTheme.PRIMARY,
-}: TextProps) => {
-  const { t } = useTranslation();
-  return (
-    <div className={classNames(cls.Text, { [cls[theme]]: true }, [className])}>
-      {title && <p className={cls.title}>{title}</p>}
-      {text && <p className={cls.text}>{text}</p>}
-    </div>
-  );
-};
+export const Text = memo(
+  ({ className, text, title, theme = TextTheme.PRIMARY }: TextProps) => {
+    return (
+      <div
+        className={classNames(cls.Text, { [cls[theme]]: true }, [className])}
+      >
+        {title && <p className={cls.title}>{title}</p>}
+        {text && <p className={cls.text}>{text}</p>}
+      </div>
+    );
+  }
+);

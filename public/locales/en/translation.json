@@ -10,5 +10,6 @@
   "Войти": "Login",
   "Введите username": "Username",
   "Введите пароль": "Password",
-  "Вы ввели непрверный логин или пароль": "You have entered an incorrect login or password."
+  "Вы ввели непрверный логин или пароль": "You have entered an incorrect login or password.",
+  "Страница профиля": "Profile Page"
 }
