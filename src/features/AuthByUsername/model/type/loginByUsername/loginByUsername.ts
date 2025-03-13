@@ -28,7 +28,9 @@ export const loginByUsername = createAsyncThunk<
         JSON.stringify(response.data)
       );
       dispatch(userActions.setAuthData(response.data));
-      extra.navigate("/about");
+      if (extra.navigate) {
+        extra.navigate("/about");
+      }
       return response.data;
     } catch (error) {
       return rejectWithValue(i18n.t("Вы ввели непрверный логин или пароль"));

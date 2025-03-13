@@ -12,6 +12,10 @@ interface SideBarItemProps {
 
 export const SideBarItem = memo(({ collapsed, item }: SideBarItemProps) => {
   const { t } = useTranslation();
+  if (!item) {
+    return null;
+  }
+
   return (
     <AppLink
       theme={AppLinkTheme.SECONDARY}
