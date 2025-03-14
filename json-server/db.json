@@ -28,7 +28,7 @@
   "profile": {
     "first": "Абоба",
     "lastname": "Кекович",
-    "age": 23,
+    "age": null,
     "currency": "RUB",
     "country": "Kazakhstan",
     "city": "Moscow123123",
