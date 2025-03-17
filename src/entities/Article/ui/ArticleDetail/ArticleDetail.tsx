@@ -16,6 +16,7 @@ import {
   getArticleDetailsIsLoading,
 } from "entities/Article/module/selectors/articleDetails";
 import { Text, TextAlign } from "shared/ui/Text/ui/Text";
+import { Skeleton } from "shared/ui/Skeleton/Skeleton";
 
 interface ArticleDetailProps {
   className?: string;
@@ -30,7 +31,8 @@ export const ArticleDetail = memo(({ className, id }: ArticleDetailProps) => {
   const { t } = useTranslation();
 
   const dispatch = useAppDispatch();
-  const isLoading = useSelector(getArticleDetailsIsLoading);
+  // const isLoading = useSelector(getArticleDetailsIsLoading);
+  const isLoading = true
   const data = useSelector(getArticleDetailsData);
   const error = useSelector(getArticleDetailsError);
 
@@ -41,7 +43,15 @@ export const ArticleDetail = memo(({ className, id }: ArticleDetailProps) => {
   let content;
 
   if (isLoading) {
-    content = <div>...Loading</div>;
+    content = (
+      <div>
+        <Skeleton className={cls.avatar} width={200} height={200} border={"50%"} />
+        <Skeleton className={cls.title} width={300} height={32} />
+        <Skeleton className={cls.skeleton} width={600} height={24} />
+        <Skeleton className={cls.skeleton} width="100%" height={200} />
+        <Skeleton className={cls.skeleton} width="100%" height={200} />
+      </div>
+    );
   } else if (error) {
     content = <Text align={TextAlign.CENTER} title={"Произошла ошибка"} />;
   } else {
