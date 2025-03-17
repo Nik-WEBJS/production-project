@@ -35,7 +35,6 @@ export const SideBar = memo(({ className }: SideBarProps) => {
       </Button>
 
       <div className={cls.items}>
-        <button onClick={() => setTest(test + 1)}>teest</button>
         {SidebarItemList.map((item) => (
           <SideBarItem item={item} key={item.path} collapsed={collapsed} />
         ))}
