@@ -15,7 +15,8 @@ export interface ArticleCodeBlock extends ArticleBlockBase {
 }
 export interface ArticleImageBlock extends ArticleBlockBase {
   type: ArticleBlockType.IMAGE;
-  title: string;
+  title?: string;
+  src: string;
 }
 export interface ArticleTextBlock extends ArticleBlockBase {
   type: ArticleBlockType.TEXT;
@@ -23,7 +24,7 @@ export interface ArticleTextBlock extends ArticleBlockBase {
   paragraphs: string[];
 }
 
-export type AticleBlock =
+export type ArticleBlock =
   | ArticleCodeBlock
   | ArticleImageBlock
   | ArticleTextBlock;
@@ -42,5 +43,5 @@ export interface Article {
   views: number;
   createdAt: string;
   type: AticleType[];
-  blocks: AticleBlock[];
+  blocks: ArticleBlock[];
 }
